@@ -43,7 +43,7 @@ class AssessmentController extends Controller
         ],
         "temperature" => 0.1, // Corrected 'temprature' to 'temperature'
     ])->json();
-
+       
     $responseMessages = $data['choices'][0]['message'];
         if (is_array($responseMessages)) {
             $responseMessages = implode("\n\n", $responseMessages);

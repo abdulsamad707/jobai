@@ -40,9 +40,17 @@
                   <li class="nav-item">
                     <a class="nav-link" href="{{route('contact')}}">Contact</a>
                   </li>
+                  @if(!Auth::check())
                   <li class="nav-item">
                     <a class="nav-link" href="{{route('login')}}">Login</a>
+
                   </li>
+                  @else
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{route('logout')}}">Logout</a>
+
+                  </li>
+                  @endif
               </ul>
               <form class="d-flex mt-3" role="search">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -138,9 +146,16 @@
               <li class="nav-item">
                 <a class="nav-link" href="{{route('contact')}}">Contact</a>
               </li>
+
+              @if(!Auth::check())
               <li class="nav-item">
                 <a class="nav-link" href="{{route('login')}}">Login</a>
               </li>
+              @else
+              <li class="nav-item">
+                <a class="nav-link" href="{{route('logout')}}">Logout</a>
+              </li>
+              @endif
               <li class="nav-item">
                 <a class="nav-link" href="{{route('admin-dashboard')}}">Admin Dashboard</a>
               </li>
